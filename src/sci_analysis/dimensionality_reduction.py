@@ -137,8 +137,9 @@ class PCA(BaseEstimator):
         y=None
     ):
         """ 
-        Overwrites sklearn's method for direct computation of PCs via US,
-        skipping dense multiplication XV in self.transform.
+        Eschew sklearn's TransformerMixin fit_transform method for direct
+        computation of PCs via US, skipping dense multiplication XV in
+        self.transform.
         """
         self.fit(x)
 
